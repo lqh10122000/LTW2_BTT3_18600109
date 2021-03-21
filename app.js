@@ -3,6 +3,7 @@ const router = require('./routers/router.js')
 
 var bodyParser = require('body-parser');
 
+var PORT = process.env.PORT || 5000;
 
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -47,7 +48,7 @@ app.post('/sum', urlencodedParser, function(req, res)
 
 
 
-app.listen(5000)
+app.listen(PORT);
 
 // const views = express.views("./views/index.html");
 
